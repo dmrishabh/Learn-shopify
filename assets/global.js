@@ -1069,6 +1069,9 @@ class VariantSelects extends HTMLElement {
         },
       });
     });
+
+    this.updateCoupon();
+    
   }
 
   updateSelectionMetadata({ target }) {
@@ -1111,6 +1114,9 @@ class VariantSelects extends HTMLElement {
     return Array.from(this.querySelectorAll('select option[selected], fieldset input:checked')).map(
       ({ dataset }) => dataset.optionValueId
     );
+  }
+  updateCoupon(){
+    console.log("Change")
   }
 }
 

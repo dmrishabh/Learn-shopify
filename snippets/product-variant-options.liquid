@@ -91,22 +91,10 @@
       {% endif %}
       {{ input_dataset }}
     >
-    {%- if option.name == 'Color' or option.name == 'Brand Colour' -%}
-      {% assign valueImage = value | handleize %}
-
-      <label
-        style="border-radius: 50%;height: 2rem;width: 2rem;padding: 2rem;"
-        class="swatch--{{ value | handle }}"
-        for="{{ input_id }}"
-      >
-      </label>
-    {%- else -%}
-      <label for="{{ input_id }}">
-        {{ value -}}
-        {{ label_unavailable }}
-      </label>
-    {%- endif -%}
-
+    <label for="{{ input_id }}">
+      {{ value -}}
+      {{ label_unavailable }}
+    </label>
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
     <option
       id="{{ input_id }}"
